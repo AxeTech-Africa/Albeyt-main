@@ -1040,7 +1040,7 @@ object {
 
 /* Make sure logo link wraps around logo image. */
 .custom-logo-link {
-  display: inline-block; }
+  display: flex; }
 
 /* ----------------------------------------------------
     Captions
@@ -4093,7 +4093,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     display: inline-block;
     padding: 0 20px;
     line-height: 40px;
-    background-color: var(--ltn__secondary-color);
+    background-color:#caa229;
     color: var(--white); }
     .header-top-btn a:hover {
       background-color: var(--ltn__secondary-color-2); }
@@ -5124,7 +5124,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding-bottom: 22px; }
 
 .ltn__header-4 .ltn__header-top-area {
-  border-color: var(--border-color-3); }
+  border-color:#393e41}
 
 .site-logo-wrap {
   display: -webkit-box;
@@ -5685,7 +5685,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
-    margin: 10px 0 10px; }
+    margin: 100px 0 10px; 
+  }
   .ltn__header-logo-and-mobile-menu-in-mobile .ltn__header-middle-area > .container-fluid > .row > .col,
   .ltn__header-logo-and-mobile-menu-in-mobile .ltn__header-middle-area > .container > .row > .col {
     max-width: 65%; }
@@ -6106,8 +6107,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   opacity: 0;
   visibility: hidden; }
   .slick-slide-arrow-1 .slick-arrow:hover {
-    background-color: var(--ltn__secondary-color);
-    border-color: var(--ltn__secondary-color);
+    background-color:#cba329;
     color: var(--white) !important; }
 
 .slick-slide-arrow-1 .slick-next {
@@ -7011,7 +7011,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   display: inline-block;
   font-size: 13px;
   font-weight: 600;
-  background-color: var(--ltn__secondary-color);
+  background-color: #cba329;
   color: var(--white);
   padding: 3px 15px 0px;
   text-transform: uppercase;
@@ -7023,13 +7023,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     content: "";
     bottom: -8px;
     left: 0;
-    border-left: 8px solid var(--ltn__secondary-color);
+    border-left: 8px solid var#cba329;
     width: 0;
     height: 0;
     border-bottom: 8px solid transparent;
     display: none; }
   .product-badge li .soldout-badge {
-    background-color: var(--red-2); }
+    background-color:#cba329 }
 
 .product-info {
   padding: 20px 0 0; }
@@ -7301,7 +7301,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .ltn__product-item-5 .product-badge li {
       font-size: 16px;
       background-color: transparent;
-      color: var(--ltn__secondary-color);
+      color: var#cba329;
       padding: 0; }
   .ltn__product-item-5 .product-img-location ul {
     padding: 0;
@@ -8124,7 +8124,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     height: 35px;
     width: 35px;
     line-height: 35px;
-    font-size: 13px; }
+    font-size: 13px; 
+  background-color: #cba329;}
   .product-badge li {
     font-size: 12px;
     padding: 1px 10px;
@@ -10857,13 +10858,13 @@ blockquote {
     text-align: center; }
 
 .mobile-show {
-  display: none; }
+  display:flex; }
 
 @media only screen and (max-width: 767px) {
   .mobile-none {
-    display: none; }
+    display: flex; }
   .mobile-show {
-    display: block; } }
+    display: flex; } }
 
 /* ----------------------------------------------------
     Cart plus minus
@@ -14347,6 +14348,37 @@ input.cart-plus-minus-box {
     font-size: 14px; }
   [type="submit"].btn {
     padding: 12px 30px; } }
+
+
+
+
+
+
+
+    /* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* Force the logo to be aligned to the left */
+  #ltn__utilize-mobile-menu .ltn__utilize-menu-head {
+      display: flex;
+      justify-content: space-between; /* This ensures space between logo and close button */
+      align-items: center;
+      padding: 10px 15px;
+  }
+
+  #ltn__utilize-mobile-menu .site-logo {
+      flex: 1;
+      text-align: left;  /* Aligns the logo to the left */
+  }
+
+  #ltn__utilize-mobile-menu .ltn__utilize-close {
+      flex: 0;
+  }
+
+  /* Ensures that the logo image doesn't overflow */
+  #ltn__utilize-mobile-menu .site-logo img {
+      max-width: 120px;
+  }
+}
 
 /* ----------------------------------------------------
     END
