@@ -1303,8 +1303,8 @@ ul {
   opacity: 0;
   visibility: hidden; }
   .slick-arrow-1 .slick-arrow:hover {
-    background-color: var(--ltn__secondary-color);
-    border-color: var(--ltn__secondary-color);
+    background-color:
+    #cba329;
     color: var(--white) !important; }
 
 .slick-arrow-1 .slick-next {
@@ -1656,11 +1656,13 @@ ul {
 
 .mean-nav::-webkit-scrollbar {
   width: 3px;
-  background-color: var(--ltn__primary-color);
+  background-color:
+  #cba329;
   border-radius: 30px; }
 
 .mean-nav::-webkit-scrollbar-thumb {
-  background-color: var(--ltn__secondary-color); }
+  background-color:
+  #cba329; }
 
 /* ----------------------------------------------------
     Padding Top
@@ -4042,10 +4044,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 ---------------------------------------------- */
 .ltn__header-top-area {
   border-bottom: 1px solid;
-  border-color: var(--border-color-3); }
+  border-color: var(--border-color-3); 
+margin-right: -10px;}
   .ltn__header-top-area .ltn__social-media ul li {
     font-size: 14px;
-    margin: 0 10px 0 0; }
+    margin: 0 10px 0 0; 
+  }
 
 .top-area-color-white {
   background-color: var(--ltn__primary-color); }
@@ -5126,7 +5130,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .ltn__header-4 .ltn__header-middle-area,
 .ltn__header-5 .ltn__header-middle-area {
   padding-top: 22px;
-  padding-bottom: 22px; }
+  padding-bottom: -22px;
+margin-right: -100px; }
 
 .ltn__header-4 .ltn__header-top-area {
   border-color:#393e41}
@@ -5588,10 +5593,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .ltn__header-3 .header-feature-item {
     display: none; } }
 
-@media (max-width: 991px) {
+@media (max-width: 760px) {
   .header-search-column,
   .header-menu-column {
-    display: none; }
+    display: flex; }
   /* sticky */
   .sticky-active {
     position: inherit; }
@@ -7521,7 +7526,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-right: 5px;
   margin-bottom: 10px;
   color: var(--ltn__heading-color);
-  background-color: var(--section-bg-1);
+  background-color:
+  #cba329;
   font-weight: 700; }
   .ltn__gallery-filter-menu button:last-child,
   .ltn__tab-menu a:last-child {
@@ -7584,9 +7590,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     line-height: 1.2;
     position: relative; }
     .ltn__tab-menu-3 a.active {
-      color: var(--ltn__secondary-color);
+      color:#cba329;
       background-color: transparent;
-      border-color: var(--ltn__secondary-color); }
+      border-color: var(#cba329); }
       .ltn__tab-menu-3 a.active::before {
         background-color: var(--ltn__secondary-color);
         border: 3px solid var(--white); }
@@ -7735,7 +7741,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .ltn__shop-details-tab-menu .nav a {
-    background-color: var(--ltn__primary-color);
+    background-color:
+    #cba329;
     color: var(--white);
     padding: 20px 20px;
     font-size: 16px;
@@ -7901,10 +7908,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
       min-width: 40px;
       height: 40px;
       line-height: 49px;
-      background-color: var(--section-bg-5);
+      background-color: var(none);
       text-align: center;
       font-size: 22px;
-      color: var(--ltn__secondary-color); }
+      color:#cba329 }
     .property-detail-feature-list .property-detail-feature-list-item h6 {
       margin-top: 0;
       margin-bottom: 6px;
@@ -8384,7 +8391,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     .ltn__social-media-2 ul li:last-child {
       margin-right: 0; }
     .ltn__social-media-2 ul li:hover a {
-      background-color: var(--ltn__secondary-color);
+      background-color:#cba329;
       color: var(--white); }
 
 .ltn__social-media-3 ul {
@@ -8600,7 +8607,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .section-subtitle-2::before {
     position: absolute;
     content: "";
-    background-color: var(--ltn__secondary-color);
+    background-color:#cba329;
     width: 100%;
     height: 100%;
     top: 50%;
@@ -9481,6 +9488,25 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     right: -3px; }
   .ltn__blog-tags a:last-child::before {
     display: none; }
+    /* Change color of text on hover for blog meta (author, tags), title, "Read more" button */
+.ltn__blog-meta a:hover, 
+.ltn__blog-btn a:hover, 
+.ltn__blog-title a:hover {
+    color: #cba329 !important; /* Color on hover */
+}
+
+/* Apply the same hover effect on the title itself */
+.ltn__blog-title a:hover {
+    color: #cba329 !important; /* Hover color for blog title */
+}
+
+/* Smooth transition for hover effect */
+.ltn__blog-meta a, 
+.ltn__blog-btn a, 
+.ltn__blog-title a {
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
 
 .ltn__blog-author img {
   border-radius: 100%;
@@ -9533,7 +9559,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     width: 2px;
     height: 10px;
     top: 50%;
-    background-color: var(--ltn__primary-color);
+    background-color: 
+    #cba329;
     right: -15px;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -9637,6 +9664,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1); }
+  
 
 /* ltn__blog-item-4 */
 .ltn__blog-item-4 {
@@ -10047,7 +10075,7 @@ blockquote {
     .ltn-author-introducing .author-info h6 {
       margin-bottom: 0;
       font-size: 14px;
-      color: var(--ltn__secondary-color); }
+      color: #cba329; }
     .ltn-author-introducing .author-info h1,
     .ltn-author-introducing .author-info h2,
     .ltn-author-introducing .author-info h3 {
@@ -10172,8 +10200,9 @@ blockquote {
       font-weight: 700;
       border-radius: 100%; }
     .ltn__pagination ul li:hover a, .ltn__pagination ul li.active a {
-      background-color: var(--ltn__secondary-color);
-      border-color: var(--ltn__secondary-color);
+      background-color: 
+      #cba329;
+      border-color:none;
       color: var(--white); }
 
 @media (max-width: 767px) {
@@ -10694,7 +10723,7 @@ blockquote {
     visibility: hidden;
     border-bottom: 3px solid transparent; }
   .ltn__team-item-3:hover {
-    background-color: var(--ltn__primary-color); }
+    background-color: #cba329; }
     .ltn__team-item-3:hover h6,
     .ltn__team-item-3:hover h4,
     .ltn__team-item-3:hover .ltn__social-media ul li {
@@ -10704,7 +10733,7 @@ blockquote {
       opacity: 1;
       visibility: visible;
       z-index: 999;
-      border-bottom-color: var(--ltn__secondary-color); }
+      border-bottom-color:#cba329; }
 
 @media (max-width: 767px) {
   .ltn__team-item-3 {
@@ -14251,10 +14280,10 @@ input.cart-plus-minus-box {
     margin-right: 0; }
 
 .theme-btn-1 {
-  background-color: var(--ltn__secondary-color);
+  background-color: var(--black);
   color: var(--white); }
   .theme-btn-1:hover {
-    background-color: var(--ltn__primary-color);
+    background-color:#cba329;
     color: var(--white); }
 
 .theme-btn-2 {
@@ -14268,8 +14297,8 @@ input.cart-plus-minus-box {
   background-color: transparent;
   border: 2px solid var(--border-color-9); }
   .theme-btn-3:hover {
-    background-color: var(--ltn__secondary-color);
-    border-color: var(--ltn__secondary-color);
+    background-color:#cba329;
+    border-color:none;
     color: var(--white); }
 
 .reverse-color {

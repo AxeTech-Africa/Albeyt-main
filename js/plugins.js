@@ -51,6 +51,34 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+document.addEventListener("DOMContentLoaded", function () {
+  // Initialize the current tab to Step 1
+  var currentTab = 1;
+
+  // Get the total number of tabs
+  var totalTabs = document.querySelectorAll('.nav a').length;
+
+  // Next Step Button
+  document.getElementById('nextStep').addEventListener('click', function (e) {
+      e.preventDefault();  // Prevent default action of the anchor tag
+
+      // Check if we're at the last tab
+      if (currentTab < totalTabs) {
+          // Increase the currentTab to move to the next tab
+          currentTab++;
+
+          // Get the ID of the next tab based on currentTab value
+          var nextTabId = '#liton_tab_3_' + currentTab;
+
+          // Trigger a click on the next tab to show it
+          var nextTab = document.querySelector(nextTabId);
+          if (nextTab) {
+              nextTab.click();  // Activate the next tab
+          }
+      }
+  });
+});
+
 
 /*-------------------------------------------------------------
   # Modernizr
