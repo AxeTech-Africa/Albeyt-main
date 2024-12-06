@@ -494,6 +494,75 @@
     <script src="js/plugins.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
+   <script>
+    // Handle the form submission for login
+    document.getElementById('login-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            const response = await fetch('http://127.0.0.1:5000/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                sessionStorage.setItem('userEmail', data.email);
+
+                // Show success message
+                const successMessage = document.getElementById('login-success');
+                successMessage.style.display = 'block';
+                successMessage.innerText = 'You are now logged in!';
+
+                // Update dropdown menu
+                updateMenu();
+
+                // Redirect to homepage after a brief delay (e.g., 2 seconds)
+                setTimeout(() => {
+                    window.location.href = 'index.html';  // Redirect to the homepage
+                }, 2000); // Adjust time if needed
+            } else {
+                alert(data.error); // Show error message if login fails
+            }
+        } catch (error) {
+            console.error('Error logging in:', error);
+        }
+    });
+
+    // Update the dropdown menu after the user logs in
+    function updateMenu() {
+        const userEmail = sessionStorage.getItem('userEmail');
+        const userMenu = document.getElementById('user-menu');
+
+        if (userEmail) {
+            userMenu.innerHTML = `
+                <li><a href="http://127.0.0.1:5000/dashboard">Profile</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            `;
+        }
+    }
+
+    // Logout functionality
+    function logout() {
+        sessionStorage.removeItem('userEmail');
+        fetch('http://127.0.0.1:5000/logout')
+            .then(() => {
+                alert('You have logged out.');
+                location.reload();  // Reload the page to reset the menu
+            })
+            .catch(error => console.error('Error logging out:', error));
+    }
+
+    // Update menu on page load if the user is logged in
+    document.addEventListener('DOMContentLoaded', updateMenu);
+</script>
+
+
   
 </body>
 </html>

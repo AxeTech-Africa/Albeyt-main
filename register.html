@@ -153,7 +153,7 @@
                                     <ul>
                                         <li><a href="login.html">Sign in</a></li>
                                         <li><a href="register.html">Register</a></li>
-                                        <li><a href="dashboard.html">My Account</a></li>
+                                        <li><a href="http://127.0.0.1:5000/dashboard">Profile</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -513,6 +513,41 @@
     <script src="js/plugins.js"></script>
     <!-- Main JS -->
     <script src="js/main.js"></script>
+    <script>
+        // Check if user is logged in (for example, check session or cookie)
+        function isLoggedIn() {
+            // You can use a session or token stored in cookies/localStorage
+            return localStorage.getItem('userLoggedIn') === 'true'; // Example check
+        }
+        
+        // Update the user menu based on login status
+        function updateUserMenu() {
+            if (isLoggedIn()) {
+                // User is logged in: show the dashboard and hide login/register
+                document.getElementById('profile-menu-item').style.display = 'block';
+                document.getElementById('login-menu-item').style.display = 'none';
+                document.getElementById('register-menu-item').style.display = 'none';
+                document.getElementById('logout-menu-item').style.display = 'block';
+            } else {
+                // User is not logged in: show login/register
+                document.getElementById('profile-menu-item').style.display = 'none';
+                document.getElementById('login-menu-item').style.display = 'block';
+                document.getElementById('register-menu-item').style.display = 'block';
+                document.getElementById('logout-menu-item').style.display = 'none';
+            }
+        }
+        
+        // Call the function on page load
+        updateUserMenu();
+        
+        // Logout function
+        function logout() {
+            localStorage.setItem('userLoggedIn', 'false'); // Set logout status
+            updateUserMenu(); // Update the menu after logout
+            // You can also redirect the user to a logout or home page
+            window.location.href = 'index.html'; // Example redirection
+        }
+        </script>
     
   
 </body>
