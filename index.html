@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Responsive css -->
     <link rel="stylesheet" href="css/responsive.css">
+   
 </head>
 
 <body>
@@ -140,22 +141,22 @@
                                 </form>
                             </div>
                         </div>
-                        <!-- user-menu -->
-                        <div class="ltn__drop-menu user-menu">
-                            <ul>
-                                <li>
-                                    <a href="#"><i class="icon-user"></i></a>
-                                    <ul id="user-menu">
-                                        <!-- Default menu for not logged in users -->
-                                        <li><a href="login.html">Sign in</a></li>
-                                        <li><a href="register.html">Register</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Success message after login -->
-                        <div id="login-success" style="display: none; color: green; margin-top: 10px;">You are now logged in!</div>
+         <!-- User Menu -->
+<div class="ltn__drop-menu user-menu">
+    <ul>
+        <li id="user-menu-item">
+            <a href="#"><i class="icon-user"></i></a>
+            <ul id="user-dropdown">
+                <!-- Default menu for not logged in users -->
+                <li><a href="login.html">Sign in</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="dashboard.html">profile</a></li>
+
+            </ul>
+        </li>
+    </ul>
+</div>
+
                         
                         
                         <!-- Mobile Menu Button -->
@@ -1141,58 +1142,35 @@
     <script>"https://kit.fontawesome.com/a076d05399.js"</script>
 
     <script>
-        // Check sessionStorage for login state
-const sessionEmail = sessionStorage.getItem('userEmail');
-const signInItem = document.getElementById('sign-in');
-const registerItem = document.getElementById('register');
-const profileItem = document.getElementById('profile');
-const logoutItem = document.getElementById('logout');
-
-// Function to update the menu
-function updateMenu() {
-    if (sessionEmail) {
-        // User is logged in
-        signInItem.style.display = 'none';
-        registerItem.style.display = 'none';
-        profileItem.style.display = 'block';
-        logoutItem.style.display = 'block';
-    } else {
-        // User is not logged in
-        signInItem.style.display = 'block';
-        registerItem.style.display = 'block';
-        profileItem.style.display = 'none';
-        logoutItem.style.display = 'none';
-    }
-}
-
-// Handle logout
-logoutItem.addEventListener('click', async () => {
-    try {
-        const response = await fetch('http://127.0.0.1:5000/logout', { method: 'GET' });
-        const data = await response.json();
-
-        if (data.success) {
-            sessionStorage.removeItem('userEmail');
-            alert('You have been logged out.');
-            updateMenu();
-        } else {
-            console.error('Logout failed');
+        // Function to check if the user is logged in
+        function checkLoginStatus() {
+            fetch('http://127.0.0.1:5001/check-login')  // Make a request to the Flask backend to check if the user is logged in
+                .then(response => response.json())
+                .then(data => {
+                    if (data.logged_in) {
+                        // If user is logged in, update the menu to show dashboard
+                        document.getElementById('user-menu-item').innerHTML = `
+                            <a href="/dashboard"><i class="icon-user"></i> Dashboard</a>
+                        `;
+                    } else {
+                        // If user is not logged in, show sign in and register options
+                        document.getElementById('user-menu-item').innerHTML = `
+                            <a href="#"><i class="icon-user"></i></a>
+                            <ul id="user-dropdown">
+                                <li><a href="login.html">Sign in</a></li>
+                                <li><a href="register.html">Register</a></li>
+                            </ul>
+                        `;
+                    }
+                });
         }
-    } catch (error) {
-        console.error('Error during logout:', error);
-    }
-});
-
-// Show login notification when a user logs in
-if (window.location.href.includes('login.html') && sessionEmail) {
-    alert('You are now logged in.');
-}
-
-// Initial menu setup
-updateMenu();
-
+    
+        // Call the function to check login status when the page loads
+        window.onload = checkLoginStatus;
     </script>
-  
+    
+     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 </body>
 </html>
 
