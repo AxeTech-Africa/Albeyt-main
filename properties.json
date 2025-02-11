@@ -1,0 +1,223 @@
+[
+  {
+      "id": "1",
+      "title": "Diamond Manor Apartment",
+      "location": "Belmont Gardens, Chicago",
+      "price": "2",
+      "status": "For Rent",
+      "category": "Featured, For Rent",
+      "date": "May 19, 2021",
+      "description": "Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.",
+      "features": {
+          "property_id": "HZ29",
+          "home_area": "120 sqft",
+          "rooms": 7,
+          "baths": 2,
+          "year_built": 1992,
+          "lot_area": "HZ29",
+          "lot_dimensions": "120 sqft",
+          "beds": 7,
+          "price": "2",
+          "property_status": "For Rent"
+      },
+      "amenities": [
+          "Air Conditioning",
+          "Gym",
+          "Swimming Pool",
+          "WiFi",
+          "Recreation",
+          "Microwave",
+          "Refrigerator",
+          "24x7 Security"
+      ],
+      "gallery": [
+          "https://tunatheme.com/tf/html/quarter-preview/quarter/img/others/16.jpg",
+          "https://tunatheme.com/tf/html/quarter-preview/quarter/img/others/15.jpg",
+          "https://tunatheme.com/tf/html/quarter-preview/quarter/img/others/14.jpg"
+      ],
+      "location_map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd",
+      "video": "https://www.youtube.com/embed/eWUxqVFBq74?autoplay=1&showinfo=0"
+  },
+  {
+      "id": "2",
+      "title": "Sunset Villa",
+      "location": "Lakeside Avenue, Miami",
+      "price": "5",
+      "status": "For Sale",
+      "category": "For Sale",
+      "date": "January 10, 2022",
+      "description": "Spacious villa with breathtaking lake views. Perfect for families and those who enjoy luxury living in a serene environment.",
+      "features": {
+          "property_id": "HZ30",
+          "home_area": "2500 sqft",
+          "rooms": 10,
+          "baths": 5,
+          "year_built": 2015,
+          "lot_area": "5000 sqft",
+          "lot_dimensions": "200 x 150 ft",
+          "beds": 5,
+          "price": "5",
+          "property_status": "For Sale"
+      },
+      "amenities": [
+          "Home Theater",
+          "Swimming Pool",
+          "Sauna",
+          "Garden",
+          "Barbecue Area",
+          "WiFi"
+      ],
+      "gallery": [
+          "https://example.com/image1.jpg",
+          "https://example.com/image2.jpg",
+          "https://example.com/image3.jpg"
+      ],
+      "location_map": "https://www.google.com/maps/embed?pb=...",
+      "video": "https://www.youtube.com/embed/abcd1234"
+  },
+  {
+      "id": "3",
+      "title": "Oceanfront Penthouse",
+      "location": "Beach Drive, California",
+      "price": "8",
+      "status": "For Rent",
+      "category": "For Rent",
+      "date": "August 25, 2023",
+      "description": "Luxury penthouse with panoramic ocean views. Features include a private terrace, jacuzzi, and exclusive beach access.",
+      "features": {
+          "property_id": "HZ31",
+          "home_area": "3500 sqft",
+          "rooms": 12,
+          "baths": 6,
+          "year_built": 2020,
+          "lot_area": "7500 sqft",
+          "lot_dimensions": "250 x 200 ft",
+          "beds": 4,
+          "price": "8",
+          "property_status": "For Rent"
+      },
+      "amenities": [
+          "Jacuzzi",
+          "Private Terrace",
+          "Beach Access",
+          "Gym",
+          "24x7 Security",
+          "Elevator"
+      ],
+      "gallery": [
+          "https://example.com/oceanfront1.jpg",
+          "https://example.com/oceanfront2.jpg",
+          "https://example.com/oceanfront3.jpg"
+      ],
+      "location_map": "https://www.google.com/maps/embed?pb=...",
+      "video": "https://www.youtube.com/embed/xyz987"
+  },
+  {
+      "id": "4",
+      "title": "Mountain View Lodge",
+      "location": "Highland Road, Denver",
+      "price": "3",
+      "status": "For Sale",
+      "category": "Featured",
+      "date": "November 12, 2022",
+      "description": "Nestled in the mountains, this lodge offers tranquility and beautiful views of the surrounding peaks. Perfect for outdoor lovers.",
+      "features": {
+          "property_id": "HZ32",
+          "home_area": "1800 sqft",
+          "rooms": 8,
+          "baths": 4,
+          "year_built": 2018,
+          "lot_area": "4000 sqft",
+          "lot_dimensions": "100 x 150 ft",
+          "beds": 4,
+          "price": "3",
+          "property_status": "For Sale"
+      },
+      "amenities": [
+          "Fireplace",
+          "Hot Tub",
+          "Garden",
+          "Hiking Trails",
+          "Private Parking"
+      ],
+      "gallery": [
+          "https://example.com/mountain1.jpg",
+          "https://example.com/mountain2.jpg",
+          "https://example.com/mountain3.jpg"
+      ],
+      "location_map": "https://www.google.com/maps/embed?pb=...",
+      "video": "https://www.youtube.com/embed/xyz123"
+  },
+  {
+      "id": "5",
+      "title": "Cityscape Residence",
+      "location": "Downtown, New York",
+      "price": "6",
+      "status": "For Rent",
+      "category": "For Rent, Featured",
+      "date": "March 1, 2024",
+      "description": "Modern apartment in the heart of New York City, close to shopping, dining, and entertainment. A great option for city dwellers.",
+      "features": {
+          "property_id": "HZ33",
+          "home_area": "2000 sqft",
+          "rooms": 6,
+          "baths": 3,
+          "year_built": 2017,
+          "lot_area": "3000 sqft",
+          "lot_dimensions": "100 x 100 ft",
+          "beds": 3,
+          "price": "6",
+          "property_status": "For Rent"
+      },
+      "amenities": [
+          "Elevator",
+          "24x7 Security",
+          "Gym",
+          "WiFi",
+          "Refrigerator"
+      ],
+      "gallery": [
+          "https://example.com/cityscape1.jpg",
+          "https://example.com/cityscape2.jpg",
+          "https://example.com/cityscape3.jpg"
+      ],
+      "location_map": "https://www.google.com/maps/embed?pb=...",
+      "video": "https://www.youtube.com/embed/abcd7890"
+  },
+  {
+      "id": "6",
+      "title": "Forest Retreat",
+      "location": "Woodland Park, Oregon",
+      "price": "4",
+      "status": "For Sale",
+      "category": "For Sale",
+      "date": "July 22, 2023",
+      "description": "Escape to nature in this beautiful forest retreat, surrounded by towering trees and natural beauty. A perfect getaway.",
+      "features": {
+          "property_id": "HZ34",
+          "home_area": "2200 sqft",
+          "rooms": 9,
+          "baths": 5,
+          "year_built": 2010,
+          "lot_area": "5500 sqft",
+          "lot_dimensions": "150 x 200 ft",
+          "beds": 5,
+          "price": "4",
+          "property_status": "For Sale"
+      },
+      "amenities": [
+          "Sauna",
+          "Outdoor Deck",
+          "Fire Pit",
+          "Private Parking",
+          "WiFi"
+      ],
+      "gallery": [
+          "https://example.com/forest1.jpg",
+          "https://example.com/forest2.jpg",
+          "https://example.com/forest3.jpg"
+      ],
+      "location_map": "https://www.google.com/maps/embed?pb=...",
+      "video": "https://www.youtube.com/embed/abcd987"
+  }
+]
